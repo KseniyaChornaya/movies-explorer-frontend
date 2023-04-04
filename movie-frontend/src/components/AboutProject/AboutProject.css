@@ -1,0 +1,147 @@
+.about-project {
+  color: black;
+  display: flex;
+}
+
+.about-project__container {
+  display: flex;
+  flex-direction: column;
+  padding: 110px 70px;
+}
+
+@media screen and (max-width: 768px) {
+  .about-project__container {
+    padding: 90px 50px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .about-project__container {
+    padding: 70px 18px;
+  }
+}
+
+.about-project__text {
+  text-align: left;
+  font-size: 22px;
+  font-weight: 400;
+  border-bottom: 1px solid black;
+  margin: 0;
+  padding: 0 0 23px 0;
+}
+
+@media screen and (max-width: 560px) {
+  .about-project__text {
+    font-size: 18px;
+  }
+}
+
+.about-project__stage {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  align-items: start;
+  margin: 0;
+  padding: 70px 0 110px 0;
+}
+
+@media screen and (max-width: 560px) {
+  .about-project__stage {
+    flex-direction: column;
+    padding: 60px 0 18px 0;
+  }
+}
+
+.about-project__item:last-child {
+  padding-left: 40px;
+}
+
+@media screen and (max-width: 560px) {
+  .about-project__item:last-child {
+    padding-left: 0px;
+  }
+}
+
+.stage-project__title {
+  font-size: 20px;
+  font-weight: 400;
+  margin: 0;
+  padding-bottom: 26px;
+}
+
+@media screen and (max-width: 768px) {
+  .stage-project__title {
+    padding-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .stage-project__title {
+    font-size: 18px;
+    padding-bottom: 16pxs;
+  }
+}
+
+.stage-project__text {
+  font-size: 14px;
+  font-weight: 400;
+  margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .stage-project__text {
+    font-size: 12px;
+    padding-bottom: 22px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .stage-project__text {
+    font-size: 11px;
+  }
+}
+
+.stage-project__wrapper {
+  display: grid;
+  grid-template-columns: 1fr 4fr;
+  align-items: center;
+}
+
+.project-time__item-green {
+  text-align: center;
+}
+
+.project-time__item-gray {
+  text-align: center;
+}
+
+.project-time__weeks {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  background-color: #f2f2f2;
+  padding: 9px 0;
+}
+
+@media screen and (max-width: 560px) {
+  .project-time__weeks {
+    font-size: 11px;
+  }
+}
+
+.color-item {
+  background-color: #2be080;
+}
+.project-time__text {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 400;
+  color: #a0a0a0;
+  padding-top: 14px;
+}
+
+@media screen and (max-width: 560px) {
+  .project-time__text {
+    font-size: 11px;
+  }
+}
