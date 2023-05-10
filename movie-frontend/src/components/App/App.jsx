@@ -4,14 +4,16 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import "./App";
-//import PopupWithForm from "./PopupWithForm";
 //import api from "../utils/Api";
-import CurrentUserContext from "../../context/CurrentUserContext";
-//import EditProfilePopup from "./EditProfilePopup";
-//import AddPlacePopup from "./AddPlacePopup";
+// import CurrentUserContext from "../../context/CurrentUserContext";
 import { Route, Routes, useNavigate, Link } from "react-router-dom";
 import Register from "../Register/Register";
+import Movie from "../Movies/Movies";
 import { Login } from "../Login/Login";
+import SearchForm from "../SearchForm/SearchForm";
+import "../Profile/Profile";
+import Profile from "../Profile/Profile";
+
 //import { ProtectedRoute } from "./ProtectedRoute";
 //import { InfoTooltip } from "./InfoTooltip";
 //import { auth } from "../utils/Auth";
@@ -44,9 +46,15 @@ function App() {
             <Route path="/sign-in" element={<Login onLogin={} />} 
             />
           </Routes> */}
-        <Main />
+        {/* <Movie /> */}
+        {/* <SearchForm /> */}
+        <Profile />
+        {/* <Main /> */}
         {/* <NotFoundPage /> */}
-        <Footer />
+        {/* <Footer /> */}
+        {/* <Routes>
+          <Route path="*" element={<NotFoundPage />} />
+        </Routes> */}
       </div>
     </div>
   );

@@ -1,8 +1,10 @@
 import React from "react";
-import { Link, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 import "./NotFoundPage";
+
 export default function NotFoundPage() {
-  //const navigate = useNavigate();
+  const navigate = useNavigate();
+
   return (
     <div className="error-page">
       <div className="error-page__container">
@@ -11,10 +13,9 @@ export default function NotFoundPage() {
       </div>
       <div
         className="error-page__button"
-        // onClick={() => {
-        // navigate(-1);
-        //}
-        //}
+        onClick={() => {
+          navigate(-1);
+        }}
       >
         Назад
       </div>

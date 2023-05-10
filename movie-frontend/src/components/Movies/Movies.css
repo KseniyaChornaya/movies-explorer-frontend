@@ -1,0 +1,10 @@
+.movie {
+  margin: 0;
+  padding: 70px 70px 80px 70px;
+}
+
+.movies__more-button {
+  max-width: 1140px;
+  background-color: #f9f9f9;
+  border-radius: 6px;
+}

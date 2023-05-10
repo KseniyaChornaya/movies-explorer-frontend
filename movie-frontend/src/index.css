@@ -9,6 +9,8 @@
 @import url(./components/Portfolio/Portfolio.css);
 @import url(./components/Promo/Promo.css);
 @import url(./components/Techs/Techs.css);
+@import url(./components/SearchForm/SearchForm.css);
+@import url(./components/CheckboxFilter/ChekboxFilter.css);
 
 body {
   margin: 0;

@@ -1,0 +1,101 @@
+import React from "react";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../../images/logo.png";
+import "./Forms.css";
+import { UrlRegExp } from "../../utils/constans";
+
+const Forms = ({
+  text,
+  handleSubmit,
+  handleChange,
+  values,
+  errors,
+  isValid,
+}) => {
+  const { pathname } = useLocation();
+  const isLoginPage = pathname === "/signin";
+
+  return (
+    <template className="form-template">
+      <Link to="/movies">
+        <img className="form-template__logo" src={logo} alt="Логотип." />
+      </Link>
+      <h1 className="form-template__title">{text.title}</h1>
+      <form
+        className="form form-template__form"
+        onSubmit={handleSubmit}
+        noValidate
+      >
+        <div className="form-template__container">
+          {!isLoginPage ? (
+            <div className="form-template__wrapper">
+              <label className="form-template__label">Имя</label>
+              <input
+                minLength="2"
+                name="name"
+                className="form-template__input"
+                type="text"
+                required
+                placeholder="имя"
+                onChange={handleChange}
+                value={values.name || ""}
+              />
+              <span className="form-template__error">{errors.name}</span>
+            </div>
+          ) : null}
+
+          <div className="form-template__wrapper">
+            <label className="form-template__label">E-mail</label>
+            <input
+              minLength="2"
+              name="email"
+              className="form-template__input"
+              type="email"
+              pattern={UrlRegExp}
+              required
+              placeholder="email"
+              onChange={handleChange}
+              value={values.email || ""}
+            />
+            <span className="form-template__error">{errors.email}</span>
+          </div>
+
+          <div className="form-template__wrapper">
+            <label className="form-template__label">Пароль</label>
+            <input
+              minLength="2"
+              name="password"
+              className="form-template__input"
+              type="password"
+              required
+              placeholder="пароль"
+              onChange={handleChange}
+              value={values.password || ""}
+            />
+            <span className="form-template__error">{errors.password}</span>
+          </div>
+        </div>
+
+        <button
+          className="form-template__btn-submit"
+          type="submit"
+          disabled={!isValid}
+        >
+          {text.bthText}
+        </button>
+      </form>
+
+      <p className="form-template__text">
+        {text.text}{" "}
+        <Link
+          to={isLoginPage ? "/signup" : "/signin"}
+          className="form-template__link page__link"
+        >
+          {text.linkText}
+        </Link>
+      </p>
+    </template>
+  );
+};
+
+export default Forms;

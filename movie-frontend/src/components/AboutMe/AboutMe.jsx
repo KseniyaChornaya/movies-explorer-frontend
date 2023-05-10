@@ -20,6 +20,7 @@ export default function AboutMe() {
           <a
             className="about-me__link"
             href="https://github.com/KseniyaChornaya?tab=repositories"
+            target="_blank"
           >
             Github
           </a>

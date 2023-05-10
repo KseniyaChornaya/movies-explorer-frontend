@@ -1,0 +1,78 @@
+.filter {
+  border-left: 1px solid #e8e8e8;
+  height: 40px;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+  font-size: 13px;
+  padding-right: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter {
+    padding-right: 19px;
+  }
+}
+
+@media screen and (max-width: 630px) {
+  .filter {
+    border: 0;
+    padding-right: 0;
+    height: 20px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .filter {
+    justify-content: center;
+    font-size: 11spx;
+  }
+}
+
+.filter__movie {
+  cursor: pointer;
+  width: 36px;
+  height: 20px;
+  background: grey;
+  display: block;
+  border-radius: 100px;
+  position: relative;
+  margin-left: 22px;
+  margin-right: 21px;
+}
+
+@media screen and (max-width: 768px) {
+  .filter__movie {
+    margin-left: 19px;
+    margin-right: 19px;
+  }
+}
+
+.filter__movie::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 16px;
+  height: 16px;
+  background: #fff;
+  border-radius: 90px;
+  transition: 0.3s;
+}
+
+.filter__button {
+  display: none;
+}
+
+.filter__button:checked + .filter__movie {
+  background-color: #2be080;
+}
+
+.filter__button:checked + .filter__movie:after {
+  left: calc(100% - 2px);
+  transform: translateX(-100%);
+}
+
+label:active:after {
+  width: 130px;
+}
