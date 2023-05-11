@@ -11,6 +11,9 @@
 @import url(./components/Techs/Techs.css);
 @import url(./components/SearchForm/SearchForm.css);
 @import url(./components/CheckboxFilter/ChekboxFilter.css);
+@import url(./components/Forms/Forms.css);
+@import url(./components/Login/Login.css);
+@import url(./components/Register/Register.css);
 
 body {
   margin: 0;

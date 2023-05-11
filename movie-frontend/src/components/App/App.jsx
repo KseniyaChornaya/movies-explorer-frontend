@@ -5,21 +5,17 @@ import Footer from "../Footer/Footer";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import "./App";
 //import api from "../utils/Api";
-// import CurrentUserContext from "../../context/CurrentUserContext";
+import CurrentUserContext from "../../context/CurrentUserContext";
 import { Route, Routes, useNavigate, Link } from "react-router-dom";
+import Forms from "../Forms/Forms";
 import Register from "../Register/Register";
 import Movie from "../Movies/Movies";
-import { Login } from "../Login/Login";
-import SearchForm from "../SearchForm/SearchForm";
-import "../Profile/Profile";
+import Login from "../Login/Login";
 import Profile from "../Profile/Profile";
-
 //import { ProtectedRoute } from "./ProtectedRoute";
-//import { InfoTooltip } from "./InfoTooltip";
-//import { auth } from "../utils/Auth";
 
 function App() {
-  // const [currentUser, setCurrentUser] = useState({});
+  const [currentUser, setCurrentUser] = useState({});
 
   return (
     <div className="App">
@@ -30,31 +26,16 @@ function App() {
         // handleUserLogOut={}
         />
         {/* <Main /> */}
-        {/* <Routes>
-            <Route
-              path="/"
-              element={
-                // <ProtectedRoute loggedIn={}>
-                <Main />
-                // </ProtectedRoute>
-              }
-            />
-            <Route
-              path="/sign-up"
-              element={<Register onRegistration={} />}
-            />
-            <Route path="/sign-in" element={<Login onLogin={} />} 
-            />
-          </Routes> */}
-        {/* <Movie /> */}
-        {/* <SearchForm /> */}
+        <Forms />
         <Profile />
-        {/* <Main /> */}
-        {/* <NotFoundPage /> */}
-        {/* <Footer /> */}
+        <Footer />
         {/* <Routes>
+          <Route path="/" element={<Main />} />
+          <Route path="/sign-up" element={<Register />} />
+          <Route path="/sign-in" element={<Login />} />
           <Route path="*" element={<NotFoundPage />} />
         </Routes> */}
+        {/* <Movie /> */}
       </div>
     </div>
   );
