@@ -7,7 +7,7 @@ export default function SavedMovies({ savedMovie }) {
   return (
     <main className="saved-movies">
       <SearchForm />
-      <MoviesCardList savedMovie={savedMovie} />
+      <MoviesCardList />
     </main>
   );
 }

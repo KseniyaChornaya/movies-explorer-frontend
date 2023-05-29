@@ -11,18 +11,7 @@ export default function MovieCardList() {
       <ul className="moviesList__container">
         {moviesList.map((item) => {
           return (
-            <MoviesCard
-              key={item.id}
-              item={item}
-              isMoviesPage={isMoviesPage}
-              //   handleSaveMovie={handleSaveMovie}
-              //   key={isMoviesPage ? item.id : item.movieId}
-              //   item={item}
-              //   isMoviesPage={isMoviesPage}
-              //   handleDeleteMovie={handleDeleteMovie}
-              //   savedMovies={savedMovies}
-              //   movies={movies}
-            />
+            <MoviesCard key={item.id} item={item} isMoviesPage={isMoviesPage} />
           );
         })}
       </ul>
