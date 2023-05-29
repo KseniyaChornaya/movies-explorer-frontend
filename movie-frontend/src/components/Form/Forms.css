@@ -83,11 +83,12 @@
   color: #000000;
 }
 
-.form__input-error {
-  font-size: 10px;
+.form__input_type_error::placeholder {
+  color: #ee3465;
 }
 
-.form__input-error::placeholder {
+.form__input-error {
+  font-size: 10px;
   color: #ee3465;
 }
 
@@ -103,6 +104,7 @@
   padding-top: 13px;
   cursor: pointer;
   transition: 0.7s;
+  width: 100%;
 }
 
 @media screen and (max-width: 456px) {

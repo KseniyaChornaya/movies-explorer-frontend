@@ -4,7 +4,7 @@
   flex-direction: column;
   align-items: center;
   padding-top: 74px;
-  min-height: calc(100vh - 74px);
+  height: calc(100vh - 74px);
 }
 
 @media screen and (max-width: 768px) {
@@ -58,12 +58,12 @@
   text-align: right;
   outline: none;
   font-size: 11px;
+  color: red;
 }
 
 .profile__line {
   border-bottom: 1px solid #e8e8e8;
-  padding-top: 16px;
-  padding-bottom: 16px;
+  margin: 0;
 }
 
 @media screen and (max-width: 520px) {
@@ -81,12 +81,12 @@
   color: #ee3465;
 }
 
-.profile__line {
+/* .profile__line {
   width: 410px;
   border-bottom: 1px solid #e8e8e8;
   padding: 0;
   margin-bottom: 17px;
-}
+} */
 
 .profile__button-submit {
   font-weight: 500;

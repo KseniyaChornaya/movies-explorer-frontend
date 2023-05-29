@@ -1,10 +1,27 @@
 .movie {
-  margin: 0;
-  padding: 70px 70px 80px 70px;
+  margin: 0 70px;
+}
+
+@media screen and (max-width: 860px) {
+  .movie {
+    margin: 0 30px;
+  }
+}
+
+@media screen and (max-width: 398px) {
+  .movie {
+    margin: 0 10px;
+  }
 }
 
 .movies__more-button {
-  max-width: 1140px;
+  width: 100%;
   background-color: #f9f9f9;
   border-radius: 6px;
+  border: none;
+  margin: 50px 0 80px;
+  height: 36px;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
 }

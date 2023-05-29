@@ -1,6 +1,6 @@
 import React from "react";
 import "./AboutMe";
-import myPhoto from "../../images/photo.JPG";
+import myPhoto from "../../images/student.png";
 
 export default function AboutMe() {
   return (

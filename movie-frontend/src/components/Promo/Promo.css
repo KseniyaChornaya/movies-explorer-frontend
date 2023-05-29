@@ -1,8 +1,8 @@
-.Promo {
+.promo {
   width: 100%;
   margin: 0;
   background-color: #5c5c5c;
-  width: 100%;
+  /* height: calc(100vh - 74px); */
 }
 
 .promo__container {
@@ -57,10 +57,11 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
   .promo__title {
     font-size: 30px;
     padding-bottom: 24px;
+    line-height: 38px;
   }
 }
 
@@ -82,13 +83,13 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
   .promo__text {
     padding-bottom: 80px;
   }
 }
 
-.promo__button {
+.promo__link {
   margin: 0;
   padding: 10px 20px;
   font-size: 12px;
@@ -97,6 +98,8 @@
   border: 1px solid rgba(255, 255, 255, 0.6);
   border-radius: 3px;
   background-color: transparent;
+  cursor: pointer;
+  text-decoration: none;
 }
 
 .promo__button:hover {
@@ -109,6 +112,9 @@
   width: 310px;
   height: 304px;
   background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+  background-color: transparent;
 }
 
 @media screen and (max-width: 1170px) {
@@ -117,10 +123,10 @@
   }
 }
 
-@media screen and (max-width: 320px) {
+@media screen and (max-width: 450px) {
   .promo__logo {
     width: 206px;
-    height: 320px;
+    height: 210px;
     padding-bottom: 44px;
   }
 }

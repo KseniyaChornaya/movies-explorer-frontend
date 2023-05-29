@@ -1,12 +1,14 @@
 .error-page {
   display: flex;
   flex-direction: column;
+  align-items: center;
   text-align: center;
 }
 
 .error-page__container {
   margin: 0;
   padding-bottom: 184px;
+  padding-top: 246px;
 }
 
 .error-page__title {
@@ -35,6 +37,7 @@
   font-weight: 400;
   font-size: 14px;
   padding-bottom: 60px;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {

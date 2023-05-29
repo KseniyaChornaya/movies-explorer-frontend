@@ -12,8 +12,20 @@ export default function Footer() {
           &#xa9; {new Date().getFullYear()}
         </p>
         <div className="footer__link-wrapper">
-          <p className="footer__link">Яндекс.Практикум</p>
-          <p className="footer__link">Github</p>
+          <a
+            href="https://practicum.yandex.ru"
+            className="footer__link"
+            target="_blank"
+          >
+            Яндекс.Практикум
+          </a>
+          <a
+            href="https://github.com/KseniyaChornaya?tab=repositories"
+            className="footer__link"
+            target="_blank"
+          >
+            Github
+          </a>
         </div>
       </div>
     </footer>

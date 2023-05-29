@@ -8,11 +8,7 @@ export default function Movie() {
     <main className="movie">
       <SearchForm />
       <MovieCardList />
-      <button
-        className="movies__more-button"
-        type="button"
-        // onClick={() => addMoreMovies()}
-      >
+      <button className="movies__more-button" type="button">
         Ещё
       </button>
     </main>

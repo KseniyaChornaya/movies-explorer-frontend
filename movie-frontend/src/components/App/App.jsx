@@ -4,38 +4,72 @@ import Main from "../Main/Main";
 import Footer from "../Footer/Footer";
 import NotFoundPage from "../NotFoundPage/NotFoundPage";
 import "./App";
-//import api from "../utils/Api";
 import CurrentUserContext from "../../context/CurrentUserContext";
-import { Route, Routes, useNavigate, Link } from "react-router-dom";
-import Forms from "../Forms/Forms";
+import {
+  Route,
+  Routes,
+  useNavigate,
+  Link,
+  Router,
+  useLocation,
+} from "react-router-dom";
 import Register from "../Register/Register";
-import Movie from "../Movies/Movies";
+import Movies from "../Movies/Movies";
 import Login from "../Login/Login";
 import Profile from "../Profile/Profile";
-//import { ProtectedRoute } from "./ProtectedRoute";
+import SavedMovies from "../SavedMovies/SavedMovies";
 
 function App() {
   const [currentUser, setCurrentUser] = useState({});
+  const location = useLocation();
 
   return (
     <div className="App">
       <div className="page">
-        <Header
-        // loggedIn={}
-        // userEmail={}
-        // handleUserLogOut={}
-        />
-        {/* <Main /> */}
-        <Forms />
-        <Profile />
-        <Footer />
-        {/* <Routes>
-          <Route path="/" element={<Main />} />
-          <Route path="/sign-up" element={<Register />} />
-          <Route path="/sign-in" element={<Login />} />
+        <Routes>
+          <Route
+            path="/"
+            element={
+              <>
+                <Header />
+                <Main />
+                <Footer />
+              </>
+            }
+          />
+          <Route path="/signup" element={<Register />} />
+          <Route path="/signin" element={<Login />} />
+          <Route
+            path="/profile"
+            element={
+              <>
+                <Header />
+                <Profile />
+              </>
+            }
+          />
+          <Route
+            path="/movies"
+            element={
+              <>
+                <Header />
+                <Movies />
+                <Footer />
+              </>
+            }
+          />
+          <Route
+            path="/saved-movies"
+            element={
+              <>
+                <Header />
+                <SavedMovies />
+                <Footer />
+              </>
+            }
+          />
           <Route path="*" element={<NotFoundPage />} />
-        </Routes> */}
-        {/* <Movie /> */}
+        </Routes>
       </div>
     </div>
   );
