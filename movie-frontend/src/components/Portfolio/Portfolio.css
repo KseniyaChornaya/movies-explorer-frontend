@@ -79,7 +79,7 @@
 .arrow-link {
   width: 29px;
   height: 60px;
-  background-image: url(../../images/arrow.png);
+  background-image: url(../../images/arrow1.svg);
   background-repeat: no-repeat;
 }
 
@@ -91,7 +91,7 @@
 
 @media screen and (max-width: 560px) {
   .arrow-link {
-    background-image: url(../../images/arrow-560.png);
+    background-image: url(../../images/arrow-560.svg);
     width: 18px;
     height: 28px;
   }

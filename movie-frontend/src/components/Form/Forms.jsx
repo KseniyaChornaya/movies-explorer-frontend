@@ -1,6 +1,6 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../../images/logo.png";
+import logo from "../../images/logo1.svg";
 import "./Forms.css";
 
 export default function Forms() {
@@ -23,7 +23,6 @@ export default function Forms() {
             name="name"
             className="form__input"
             type="text"
-            required
             placeholder="Виталий"
           />
           {/* <span className="form__input-error">{errors.name}</span> */}
@@ -35,7 +34,6 @@ export default function Forms() {
             name="email"
             className="form__input"
             type="email"
-            required
             placeholder="pochta@yandex.ru|"
           />
           {/* <span className="form__input-error">{errors.email}</span> */}
@@ -48,7 +46,6 @@ export default function Forms() {
               name="password"
               className="form__input form__input_type_error"
               type="password"
-              required
               placeholder="••••••••••••••"
             />
             <span className="form__input-error">Что-то пошло не так...</span>

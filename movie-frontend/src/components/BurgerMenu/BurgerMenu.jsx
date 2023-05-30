@@ -1,43 +1,38 @@
 import React, { useState } from "react";
-import { Link, NavLink, useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import "./BurgerMenu";
 
 export default function Burger() {
   const location = useLocation();
 
   //устанавливаем классы
-  const [menuClass, setMenuClass] = useState("menu hidden");
-  const [burgerClass, setBurgerClass] = useState("burger-bar unclicked");
+  const [menuClass, setMenuClass] = useState(
+    "burger-menu burger-menu_type_hidden"
+  );
+  const [burgerClass, setBurgerClass] = useState("burger__toggle-button");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   //переключаем меню
   const toggleMenu = () => {
     if (!isMenuOpen) {
-      setMenuClass("menu visible");
-      setBurgerClass("burger-bar clicked");
+      setMenuClass("burger-menu");
+      setBurgerClass("burger__toggle-button burger__toggle-button_type_close");
     } else {
-      setMenuClass("menu hidden");
-      setBurgerClass("burger-bar unclicked");
+      setMenuClass("burger-menu burger-menu_type_hidden");
+      setBurgerClass("burger__toggle-button");
     }
-
     setIsMenuOpen(!isMenuOpen);
   };
   return (
-    <>
-      <nav className="burger">
-        <div className="burger__menu" onClick={toggleMenu}>
-          <div className={burgerClass}></div>
-          <div className={burgerClass}></div>
-          <div className={burgerClass}></div>
-        </div>
-      </nav>
-      <div className={menuClass}>
+    <div className="burger">
+      <button className={burgerClass} onClick={toggleMenu}></button>
+      <nav className={menuClass}>
         <ul className="burger-menu__list">
           <li className="burger-menu__item">
             <NavLink
               to="/"
               className={({ isActive }) =>
-                isActive ? "burger-menu__link_active" : "burger-menu__link"
+                isActive ? "burger-menu__link_type_active" : "burger-menu__link"
               }
             >
               Главная
@@ -47,7 +42,7 @@ export default function Burger() {
             <NavLink
               to="/movies"
               className={({ isActive }) =>
-                isActive ? "burger-menu__link_active" : "burger-menu__link"
+                isActive ? "burger-menu__link_type_active" : "burger-menu__link"
               }
             >
               Фильмы
@@ -57,7 +52,7 @@ export default function Burger() {
             <NavLink
               to="/saved-movies"
               className={({ isActive }) =>
-                isActive ? "burger-menu__link_active" : "burger-menu__link"
+                isActive ? "burger-menu__link_type_active" : "burger-menu__link"
               }
             >
               Сохраненные фильмы
@@ -70,7 +65,7 @@ export default function Burger() {
         >
           Аккаунт
         </NavLink>
-      </div>
-    </>
+      </nav>
+    </div>
   );
 }
