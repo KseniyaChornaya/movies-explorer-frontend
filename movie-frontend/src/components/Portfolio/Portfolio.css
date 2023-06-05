@@ -1,0 +1,98 @@
+.portfolio {
+  padding: 0 70px 125px;
+}
+@media screen and (max-width: 768px) {
+  .portfolio {
+    padding: 0 50px 90px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .portfolio {
+    padding: 0 14px 70px;
+  }
+}
+
+.section-name {
+  font-size: 18px;
+  font-weight: 400;
+  color: #a0a0a0;
+  margin: 0;
+  padding-bottom: 50px;
+}
+
+@media screen and (max-width: 560px) {
+  .section-name {
+    font-size: 14px;
+  }
+}
+
+.projects-list {
+  margin: 0;
+  list-style: none;
+  padding: 0;
+}
+
+.list-item {
+  color: black;
+  padding-top: 40px;
+  border-bottom: 1px solid #e8e8e8;
+  padding-bottom: 19px;
+}
+
+.project-link {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 30px;
+  font-weight: 400;
+  text-decoration: none;
+  transition: 0, 4 ease-in;
+  color: black;
+}
+
+@media screen and (max-width: 768px) {
+  .project-link {
+    font-size: 28px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .project-link {
+    font-size: 18px;
+  }
+}
+
+.list-item:first-child {
+  padding-top: 0;
+}
+
+.list-item:last-child {
+  padding-bottom: 0;
+  border: 0px;
+}
+
+.link-text {
+  margin: 0;
+}
+
+.arrow-link {
+  width: 29px;
+  height: 60px;
+  background-image: url(../../images/arrow1.svg);
+  background-repeat: no-repeat;
+}
+
+@media screen and (max-width: 768px) {
+  .arrow-link {
+    width: 27px;
+  }
+}
+
+@media screen and (max-width: 560px) {
+  .arrow-link {
+    background-image: url(../../images/arrow-560.svg);
+    width: 18px;
+    height: 28px;
+  }
+}
