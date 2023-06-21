@@ -1,9 +1,16 @@
 import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../../images/logo1.svg";
+import { emailRegexp } from "../../utils/constants";
 import "./Forms.css";
 
-export default function Forms() {
+export default function Forms({
+  handleSubmit,
+  handleChange,
+  values,
+  errors,
+  isValid,
+}) {
   const { pathname } = useLocation();
   const isLoginPage = pathname === "/signin";
 
@@ -15,7 +22,7 @@ export default function Forms() {
       <h1 className="form-template__title">
         {isLoginPage ? "Рады видеть!" : "Добро пожаловать!"}
       </h1>
-      <form className="form" noValidate>
+      <form className="form" onSubmit={handleSubmit} noValidate>
         <div className="form__input-container">
           <label className="form__input-label">Имя</label>
           <input
@@ -23,9 +30,11 @@ export default function Forms() {
             name="name"
             className="form__input"
             type="text"
-            placeholder="Виталий"
+            onChange={handleChange}
+            value={values.name || ""}
+            required
           />
-          {/* <span className="form__input-error">{errors.name}</span> */}
+          <span className="form__input-error">{errors.name}</span>
         </div>
         <div className="form__input-container">
           <label className="form__input-label">E-mail</label>
@@ -34,9 +43,12 @@ export default function Forms() {
             name="email"
             className="form__input"
             type="email"
-            placeholder="pochta@yandex.ru|"
+            pattern={emailRegexp}
+            onChange={handleChange}
+            value={values.email || ""}
+            required
           />
-          {/* <span className="form__input-error">{errors.email}</span> */}
+          <span className="form__input-error">{errors.email}</span>
         </div>
         {!isLoginPage ? (
           <div className="form__input-container">
@@ -46,37 +58,39 @@ export default function Forms() {
               name="password"
               className="form__input form__input_type_error"
               type="password"
-              placeholder="••••••••••••••"
+              onChange={handleChange}
+              value={values.password || ""}
+              required
             />
-            <span className="form__input-error">Что-то пошло не так...</span>
+            <span className="form__input-error">{errors.password}</span>
           </div>
         ) : null}
+        {isLoginPage ? (
+          <div className="submit__wrapper">
+            <button className="form__submit" type="submit" disabled={!isValid}>
+              Войти{" "}
+            </button>
+            <p className="form__text">
+              Еще не зарегистрированы?
+              <Link to="/signup" className="form__link">
+                Регистрация
+              </Link>
+            </p>
+          </div>
+        ) : (
+          <div className="submit__wrapper">
+            <button className="form__submit" type="submit" disabled={!isValid}>
+              Зарегистрироваться{" "}
+            </button>
+            <p className="form__text">
+              Уже зарегистрированы?
+              <Link to="/signin" className="form__link">
+                Войти
+              </Link>
+            </p>
+          </div>
+        )}
       </form>
-      {isLoginPage ? (
-        <>
-          <button className="form__submit" type="submit">
-            Войти
-          </button>
-          <p className="form__text">
-            Еще не зарегистрированы?
-            <Link to="/signup" className="form__link">
-              Регистрация
-            </Link>
-          </p>
-        </>
-      ) : (
-        <>
-          <button className="form__submit" type="submit">
-            Зарегистрироваться{" "}
-          </button>
-          <p className="form__text">
-            Уже зарегистрированы?
-            <Link to="/signin" className="form__link">
-              Войти
-            </Link>
-          </p>
-        </>
-      )}
     </template>
   );
 }

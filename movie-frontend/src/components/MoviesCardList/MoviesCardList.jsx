@@ -1,6 +1,6 @@
 import React from "react";
 import MoviesCard from "../MoviesCard/MoviesCard";
-import moviesList from "../../utils/constans";
+import moviesList from "../../utils/constants";
 import { useLocation } from "react-router-dom";
 export default function MovieCardList() {
   const { pathname } = useLocation();

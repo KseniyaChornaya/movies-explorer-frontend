@@ -15,8 +15,7 @@ import img14 from "../images/13.svg";
 import img15 from "../images/14.svg";
 import img16 from "../images/15.svg";
 
-export const UrlRegExp =
-  /(https?:\/\/)(w+:\.)?((\S+)(:\d{2,5})|((\w-?)+\.+))(:\d{2,5})?((\/.+)+)?\/?#?/;
+const emailRegexp = "[A-z0-9_.-]{1,}@[A-z0-9_.-]{1,}[.][A-z]{2,6}";
 
 const moviesList = [
   {
@@ -117,4 +116,7 @@ const moviesList = [
   },
 ];
 
+const EDIT_MESSAGE = "Данные изменены";
+
+export { emailRegexp, EDIT_MESSAGE };
 export default moviesList;

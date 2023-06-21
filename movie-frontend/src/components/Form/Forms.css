@@ -103,6 +103,13 @@
   color: #ee3465;
 }
 
+.submit__wrapper {
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form__submit {
   border-radius: 3px;
   background-color: #2be080;
@@ -116,6 +123,11 @@
   cursor: pointer;
   transition: 0.7s;
   width: 100%;
+}
+
+.form__submit:disabled {
+  opacity: 0.6;
+  cursor: auto;
 }
 
 @media screen and (max-width: 456px) {
